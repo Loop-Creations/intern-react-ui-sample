@@ -1,0 +1,120 @@
+.container {
+  background-color: #f9f9f9;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.form_section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.form_section .form_section_header {
+  border-bottom: 1px solid #dddddd;
+  padding: 1rem 0;
+}
+
+.form_section .form_section_header h2 {
+  font-weight: 500;
+  color: #222;
+  font-size: 1.2rem;
+}
+
+.form_section.section_1 .form_section_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: 1rem;
+}
+
+.form_section.section_2{
+    padding: 2rem 4rem;
+}
+
+.form_section.section_2 .form_section_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+
+.form_section.section_2 .form_section_body div span {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form_section.section_2 .form_section_body div span h3 {
+  color: #222;
+  width: 60%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form_section.section_2 .form_section_body div span button {
+  background-color: #185adb;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  width: 60%;
+  height: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.form_section.section_2 .form_section_body div span button:hover {
+  background-color: #0146cf;
+}
+
+.form_section.section_3 .form_section_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 1rem;
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.order {
+  background-color: rgba(24, 90, 219, 0.2);
+  padding: 10px 15px;
+  margin: 0.5rem;
+  border: 1px solid #0146cf;
+  border-radius: 3px;
+  width: 40%;
+}
+
+.order span {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr;
+  font-size: 0.9rem;
+  color: #185adb;
+  line-height: 1.5;
+}
+
+.order header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.order header img {
+  width: 12px;
+  height: 12px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.span_input{
+    grid-column: span 2;
+}

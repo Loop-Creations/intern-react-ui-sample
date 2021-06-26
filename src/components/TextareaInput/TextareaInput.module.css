@@ -1,0 +1,37 @@
+.text_input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin: 1rem 0;
+}
+
+.text_input textarea {
+  display: block;
+  width: 80.9% !important;
+  min-height: 100px !important;
+  outline: none;
+  margin-left: 2rem;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  padding: 1rem !important;
+  font-size: 1rem;
+}
+
+.text_input textarea:hover {
+  border-color: #39a2db;
+}
+
+.text_input textarea:focus {
+  border-color: #185adb;
+}
+
+.text_input textarea:focus ~ label {
+  color: #185adb;
+}
+
+.text_input label {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #333333;
+}

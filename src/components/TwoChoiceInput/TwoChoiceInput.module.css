@@ -1,0 +1,57 @@
+.two_choice_input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin: 1rem 0;
+}
+
+.two_choice_input div {
+  width: 60%;
+  height: 50px;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.two_choice_input div button {
+  width: 49.5%;
+  border: 1px solid #185adb;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  color: #185adb;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.two_choice_input div button:hover{
+    opacity: 1;
+}
+
+.two_choice_input div button.active {
+    color: #FFFFFF;
+    background-color: #185adb;
+    opacity: 1;
+}
+
+.two_choice_input input:hover {
+  border-color: #39a2db;
+}
+
+.two_choice_input input:focus {
+  border-color: #185adb;
+}
+
+.two_choice_input input:focus ~ label {
+  color: #185adb;
+}
+
+.two_choice_input label {
+  font-size: 0.9rem;
+  color: #333333;
+}
