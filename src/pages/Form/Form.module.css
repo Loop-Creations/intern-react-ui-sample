@@ -78,23 +78,28 @@
   row-gap: 1rem;
 }
 
+.savebutton{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .savebutton  button{
-  background-color: #185adb;
+  background-color: #008533;
   color: #ffffff;
   text-transform: uppercase;
   border: none;
-  width: 10%;
+  width: 150px;
   height: 50px;
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 3px;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
-  margin-left: 85%;
 }
 
 .savebutton button:hover {
-  background-color: #0146cf;
+  background-color: green;
 }
 
 .orders {
@@ -137,3 +142,88 @@
 .span_input{
     grid-column: span 2;
 }
+
+@media only screen and (max-width: 1200px) {
+  .form_section {
+    padding: 1rem 2rem;
+  }
+  .form_section.section_1 .form_section_body{
+    gap: 0rem;
+  }
+  .form_section.section_2{
+    padding: 2rem 2rem;
+}
+  .form_section.section_2 .form_section_body{
+    gap: 0rem;
+  }
+  .form_section.section_3 .form_section_body{
+    gap: 0rem;
+  }
+  .orders{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .form_section.section_1 .form_section_body{
+    display: block;
+  }
+  .form_section.section_3 .form_section_body{
+    display: block;
+  }
+  
+  .form_section.section_2 .form_section_body div span button{
+    width: 100%;
+  }
+  .form_section.section_2 .form_section_body div span h3{
+    text-align: left;
+    width: 100%;
+  }
+  .order{
+    width: 50%;
+  }
+  
+}
+
+@media only screen and (max-width: 950px){
+  .order{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  .order{
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 750px){
+  .order{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  .orders{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .order{
+    margin: 0;
+    width: 200px !important;
+    margin-right:1rem;
+  }
+  .form_section.section_2 .form_section_body{
+    display: block;
+  }
+}
+

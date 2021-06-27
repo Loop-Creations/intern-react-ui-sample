@@ -1,35 +1,32 @@
 import { useState } from "react"
-import "../../components/Dropdown/Dropdownarea.css"
+import styles from "../../components/Dropdown/Dropdownarea.module.css"
 
-function Dropdownarea({ selected, setSelected }) {
+function Dropdownarea({ selected, setSelected, options, label }) {
     const [isActive, setIsActive] = useState(false);
-    const options = ['Cx Demand', 'Missing Item in RO', 'Range Building', 'Periodical Replenishment'];
     const clickHandler = (value) => {
         setSelected(value);
         setIsActive(false);
     }
-    return ( <
-        div className = "dropdown" >
-        <
-        div className = "dropdown-button"
-        onClick = {
-            (e) => setIsActive(!isActive) } >
-        <
-        p > Cx Demand / Missing Item in RO / Range Building < /p> <
-        span className = "fas fa-caret-down" > < /span> <
-        /div> <
-        label > Order Type < /label> {
-            isActive &&
-                <
-                div className = "dropdown-content" > {
-                    options.map(option => < div className = "dropdown-item"
-                        onCLick = { clickHandler } > { option } < /div>)
-                    } <
-                    /div>
-                } <
-                /div>
-        );
-    }
+    return (
+        <div className={styles.dropdown} >
+            <div className={styles.dropdown_button} onClick={(e) => setIsActive(!isActive)} >
+                <p>{selected}</p>
+                <i className="fas fa-chevron-down"></i>
+            </div>
+            <label> {label} </label>
+            {
+                isActive &&
+                <div className={styles.dropdown_content} >
+                    {
+                        options.map(option => <div className={styles.dropdown_item} onClick={() => clickHandler(option)}>
+                            {option}
+                        </div>)
+                    }
+                </div>
+            }
+        </div>
+    );
+}
 
 
-    export default Dropdownarea
+export default Dropdownarea;

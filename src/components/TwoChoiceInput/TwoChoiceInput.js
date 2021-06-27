@@ -17,7 +17,7 @@ function TwoChoiceInput({ label, id }) {
                     NO
                 </button>
             </div>
-            <label for={id}>{label}</label>
+            <label htmlFor={id}>{label}</label>
         </div>
     )
 }

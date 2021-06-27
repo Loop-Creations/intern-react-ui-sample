@@ -3,8 +3,8 @@ import TwoChoiceInput from '../../components/TwoChoiceInput/TwoChoiceInput';
 import TextareaInput from '../../components/TextareaInput/TextareaInput';
 import cross from '../../assets/close.png';
 import styles from './Form.module.css';
-import Dropdownarea from '../../components/Dropdown/Dropdownarea'
-import Dropdownarea2 from '../../components/Dropdown/Dropdownarea2'
+import Dropdownarea from '../../components/Dropdown/Dropdownarea';
+
 import { useState } from 'react';
 function Form() {
     return (
@@ -20,7 +20,10 @@ function Form() {
 }
 
 function FormSectionOne() {
-    const [selected, setSelected] = useState("");
+    const [selected_1, setSelected_1] = useState("Select a Type");
+    const [selected_2, setSelected_2] = useState("Select a Type");
+    const option_1 = ['Cx Demand', 'Missing Item in RO', 'Range Building', 'Periodical Replenishment'];
+    const option_2 = ["IW", "RO", "VO", "WH", "OT"];
     return (
         <div className={[styles.form_section, styles.section_1].join(" ")}>
             <div className={styles.form_section_header}>
@@ -33,10 +36,8 @@ function FormSectionOne() {
                     <TextInput id="3" label="Recipient Name" />
                 </div>
                 <div>
-                    {/* <TextInput id="4" label="Order Type" /> */}
-                    <Dropdownarea selected={selected} setSelected={setSelected}/>
-                    {/* <TextInput id="5" label="Destination Type" /> */}
-                    <Dropdownarea2 selected={selected} setSelected={setSelected} />
+                    <Dropdownarea options={option_1} label="Order Type" selected={selected_1} setSelected={setSelected_1}/>
+                    <Dropdownarea options={option_2} label="Destination Type" selected={selected_2} setSelected={setSelected_2} />
                     <TextInput id="6" label="Recipient Contact" />
                 </div>
             </div>
@@ -70,6 +71,8 @@ function FormSectionTwo() {
 }
 
 function FormSectionThree() {
+    const option_3 = ["High", "Medium", "Low"];
+    const [selected_3, setSelected_3] = useState("Select a Type");
     return (
         <div className={[styles.form_section, styles.section_3].join(" ")}>
             <div className={styles.form_section_body}>
@@ -78,7 +81,7 @@ function FormSectionThree() {
                     <TextInput id="12" label="Order Value(Rs.)" />
                 </div>
                 <div>
-                    <TextInput id="13" label="Case Priority" />
+                    <Dropdownarea options={option_3} label="Case Priority" selected={selected_3} setSelected={setSelected_3} />
                     <TwoChoiceInput id="14" label="Advance Status" />
                 </div>
                 <div className={styles.span_input}>
