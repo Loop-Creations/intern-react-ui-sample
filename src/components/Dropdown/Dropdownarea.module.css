@@ -54,13 +54,13 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 }
 
-.dropdown .dropdown_content .dropdown-item {
+.dropdown .dropdown_content .dropdown_item {
     padding: 1rem 1.25rem;
     cursor: pointer;
     transition: all 0.2s;
 }
 
-.dropdown .dropdown_content .dropdown-item:hover {
+.dropdown .dropdown_content .dropdown_item:hover {
     background: #f4f4f4;
 }
 @media only screen and (max-width: 1100px) {
