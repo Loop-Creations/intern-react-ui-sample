@@ -1,10 +1,11 @@
 import TextInput from '../../components/TextInput/TextInput';
 import TwoChoiceInput from '../../components/TwoChoiceInput/TwoChoiceInput';
 import TextareaInput from '../../components/TextareaInput/TextareaInput';
-
 import cross from '../../assets/close.png';
 import styles from './Form.module.css';
-
+import Dropdownarea from '../../components/Dropdown/Dropdownarea'
+import Dropdownarea2 from '../../components/Dropdown/Dropdownarea2'
+import { useState } from 'react';
 function Form() {
     return (
         <div className={styles.container}>
@@ -12,12 +13,14 @@ function Form() {
                 <FormSectionOne />
                 <FormSectionTwo />
                 <FormSectionThree />
+                <FormSavebutton/>
             </form>
         </div>
     )
 }
 
 function FormSectionOne() {
+    const [selected, setSelected] = useState("");
     return (
         <div className={[styles.form_section, styles.section_1].join(" ")}>
             <div className={styles.form_section_header}>
@@ -30,8 +33,10 @@ function FormSectionOne() {
                     <TextInput id="3" label="Recipient Name" />
                 </div>
                 <div>
-                    <TextInput id="4" label="Order Type" />
-                    <TextInput id="5" label="Destination Type" />
+                    {/* <TextInput id="4" label="Order Type" /> */}
+                    <Dropdownarea selected={selected} setSelected={setSelected}/>
+                    {/* <TextInput id="5" label="Destination Type" /> */}
+                    <Dropdownarea2 selected={selected} setSelected={setSelected} />
                     <TextInput id="6" label="Recipient Contact" />
                 </div>
             </div>
@@ -77,13 +82,22 @@ function FormSectionThree() {
                     <TwoChoiceInput id="14" label="Advance Status" />
                 </div>
                 <div className={styles.span_input}>
-                    <TextareaInput id="14" label="Advance Status"/>
+                    <TextareaInput id="14" label="Add Comment"/>
                 </div>
+                
             </div>
         </div>
     )
 }
-
+function FormSavebutton() {
+    return (
+        <div className={styles.savebutton}>
+            <span>
+                <button type="button">Save</button>
+            </span>
+        </div>
+    )
+}
 function OrderItem() {
     return (
         <div className={styles.order}>

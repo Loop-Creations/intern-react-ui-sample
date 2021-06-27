@@ -78,6 +78,25 @@
   row-gap: 1rem;
 }
 
+.savebutton  button{
+  background-color: #185adb;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  width: 10%;
+  height: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  margin-left: 85%;
+}
+
+.savebutton button:hover {
+  background-color: #0146cf;
+}
+
 .orders {
   display: flex;
   flex-direction: column;
